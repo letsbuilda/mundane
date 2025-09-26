@@ -1,0 +1,61 @@
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  lint-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@557e51de59eb14aaaba2ed9621916900a91d50c6 # v6.6.1
+        with:
+          enable-cache: true
+
+      - name: Setup Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version-file: pyproject.toml
+
+      - name: Sync dependencies
+        run: uv sync --all-groups
+
+      - name: Run pre-commit
+        run: uv run pre-commit run --all-files
+
+      - name: Check formatting
+        run: uv run ruff format --check .
+
+      - name: Run Ruff checks
+        run: uv run ruff check --output-format=github .
+
+      - name: Run mypy
+        run: uv run mypy --strict src/
+
+      - name: Run tests
+        run: uv run coverage run -m pytest -v
+
+      - name: Create coverage report
+        run: uv run coverage xml
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@3cb13a12348ef4ffcf9783ac0f74954f92113e33 # unreleased
+        with:
+          use_oidc: true
+
+      - name: Upload test results to Codecov
+        if: ${{ !cancelled() }}
+        uses: codecov/test-results-action@47f89e9acb64b76debcd5ea40642d25a4adced9f # v1.1.1
+        with:
+          use_oidc: true

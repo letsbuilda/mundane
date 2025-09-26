@@ -1,0 +1,20 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: 3e8a8703264a2f4a69428a0aa4dcb512790b2c8c  # frozen: v6.0.0
+    hooks:
+      - id: check-case-conflict
+      - id: check-merge-conflict
+      - id: check-toml
+      - id: check-yaml
+      - id: check-json
+      - id: trailing-whitespace
+        args: [ --markdown-linebreak-ext=md ]
+      - id: mixed-line-ending
+        args: [ --fix=lf ]
+      - id: end-of-file-fixer
+        exclude: .devcontainer/devcontainer-lock.json
+
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 5962e71b72bb9ab6bcf2bd5abc2cad494f1399fc  # frozen: 0.8.14
+    hooks:
+      - id: uv-lock
