@@ -73,7 +73,8 @@ convention = "numpy"
 plugins = ["pydantic.mypy"]
 
 [tool.coverage.run]
-source = ["mundane"]
+source_pkgs = ["mundane"]
+source_dirs = ["tests"]
 
 [tool.pytest.ini_options]
 addopts = "--strict-markers"
