@@ -9,7 +9,7 @@ readme = "README.md"
 license = "MIT"
 requires-python = ">=3.13"
 dependencies = [
-    "pydantic>=2.13.0",
+    "pydantic>=2.13.2",
     "email-validator>=2.3.0",
     "httpx>=0.27.2",
 ]
@@ -19,7 +19,7 @@ repository = "https://github.com/letsbuilda/mundane/"
 documentation = "https://docs.letsbuilda.dev/mundane/"
 
 [build-system]
-requires = ["uv_build>=0.11.6"]
+requires = ["uv_build>=0.11.7"]
 build-backend = "uv_build"
 
 [dependency-groups]
@@ -28,7 +28,7 @@ dev = [
     "nox>=2026.4.10",
     "pre-commit>=3.7.1",
     # Linters
-    "ruff>=0.15.10",
+    "ruff>=0.15.11",
     "mypy>=1.20.1",
 ]
 docs = [
