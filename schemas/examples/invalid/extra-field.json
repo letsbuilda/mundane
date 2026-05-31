@@ -1,0 +1,17 @@
+{
+  "set_id": "example",
+  "name": "Extra Field Example",
+  "version": "1.0.0",
+  "cards": [
+    {
+      "id": "typo_card",
+      "name": "Typo Card",
+      "cost": 1,
+      "type": "task",
+      "effect": "none",
+      "params": {},
+      "text": "Invalid on purpose: the field below is misspelled.",
+      "txet": "should have been `text`; additionalProperties:false rejects it"
+    }
+  ]
+}

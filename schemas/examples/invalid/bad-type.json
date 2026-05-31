@@ -1,0 +1,16 @@
+{
+  "set_id": "example",
+  "name": "Bad Type Example",
+  "version": "1.0.0",
+  "cards": [
+    {
+      "id": "weird_card",
+      "name": "Weird Card",
+      "cost": 1,
+      "type": "vehicle",
+      "effect": "none",
+      "params": {},
+      "text": "Invalid on purpose: `type` is not one of the five card types."
+    }
+  ]
+}
