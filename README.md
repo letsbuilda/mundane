@@ -1,6 +1,6 @@
 # Mundane
 
-*Magic: The Gathering without the, you know, magic.*
+*No dragons. No spells. Just Tuesday.*
 
 Two households face off across the kitchen table. You spend **Time** to play **People**,
 **Appliances**, and **Habits**, drop **Tasks** onto the stack, and answer them with **Instants** — all
