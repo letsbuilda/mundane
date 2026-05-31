@@ -19,8 +19,10 @@ human-readable description of how Mundane works.
 
 The specification is the human-readable *mirror* of the engine. The engine — in
 [`mundane-backend`](https://github.com/letsbuilda/mundane-backend) — is the source of truth: where
-the code and the spec disagree, the code wins and the spec is the thing to fix. The card library is
-documented with the engine.
+the code and the spec disagree, the code wins and the spec is the thing to fix. Cards are published
+as JSON [card sets](./specs/card-sets.md) in
+[`mundane-cards`](https://github.com/letsbuilda/mundane-cards); the effects they name live with the
+engine.
 
 ## Repositories
 
@@ -28,6 +30,7 @@ documented with the engine.
 |------------|------------|
 | [**mundane**](https://github.com/letsbuilda/mundane) (this repo) | Meta and spec — the game design docs and the project index. |
 | [**mundane-backend**](https://github.com/letsbuilda/mundane-backend) | The reference implementation — the rules engine plus a [Litestar](https://litestar.dev) HTTP API over it. |
+| [**mundane-cards**](https://github.com/letsbuilda/mundane-cards) | The card library — cards published as JSON [card sets](./specs/card-sets.md), curated by PR. |
 
 ## License
 
