@@ -50,13 +50,3 @@ uvx check-jsonschema --schemafile schemas/card-set.schema.json schemas/examples/
 
 `examples/core.example.json` is a valid set (the Core Set). `examples/invalid/` holds files that are
 valid *except* for one deliberate error each, so you can see exactly what the schema rejects.
-
-## Versioning the schema
-
-Consumers pin the schema by version. Bump it deliberately (the same discipline used for pinning
-Litestar to a commit):
-
-- Tag the meta repo `schema-v1` once a schema revision lands on `main`. Consumers
-  (`mundane-cards` CI, `mundane-backend`) **vendor** a pinned copy of the schema rather than fetching
-  it at runtime, so unrelated changes on `main` never break them.
-- A breaking change to the contract gets a new tag (`schema-v2`) and a coordinated bump in consumers.
