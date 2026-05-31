@@ -10,16 +10,17 @@ This is the **meta repository** for Mundane: the home of the game's design and s
 index to the repositories that implement it. There is no game code here — just the canonical,
 human-readable description of how Mundane works.
 
-## The specification
+## Documentation
 
-- **[Game specification](./game-docs/SPEC.md)** — the rules in full: Composure and Time, the five
-  card types, the turn structure, priority, the stack, and the exact legality of every action.
-- **[Card catalog](./game-docs/CARDS.md)** — every card in the library, with its cost, type, and
-  rules text.
+- **[Specification](./specs/)** — the tight, normative rules: Composure and Time, the five card types,
+  the turn structure, priority, the stack, and the exact legality of every action.
+- **[Rulebook](./rulebook/)** — the same rules in plain language, with worked examples and a sample
+  turn.
 
 The specification is the human-readable *mirror* of the engine. The engine — in
 [`mundane-backend`](https://github.com/letsbuilda/mundane-backend) — is the source of truth: where
-the code and the spec disagree, the code wins and the spec is the thing to fix.
+the code and the spec disagree, the code wins and the spec is the thing to fix. The card library is
+documented with the engine.
 
 ## Repositories
 
