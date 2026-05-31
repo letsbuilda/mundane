@@ -1,6 +1,6 @@
 # Mundane — Rulebook
 
-*Magic: The Gathering without the, you know, magic.*
+*No dragons. No spells. Just Tuesday.*
 
 Welcome to Mundane, a game in which two households try to out-ordinary each other into oblivion. You
 throw house parties, file noise complaints, adopt wholesome habits, and buy questionable appliances —
